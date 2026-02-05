@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài tập 05 - Employee Form</title>
+
+  <style>
+    body{
+      font-family: Arial, sans-serif;
+      background:#f2f2f2;
+    }
+
+    /* MAIN BOX */
+    .box{
+      width:760px;
+      margin:30px auto;
+      background:white;
+      border:1px solid #cfcfcf;
+      padding:25px 40px;
+    }
+
+    /* SECTION TITLE */
+    .title{
+      font-weight:bold;
+      font-size:18px;
+      margin:15px 0 5px;
+    }
+
+    .line{
+      border:none;
+      border-top:2px solid #bfbfbf;
+      margin-bottom:15px;
+    }
+
+    /* FORM ROW */
+    .row{
+      display:flex;
+      align-items:center;
+      margin:8px 0;
+    }
+
+    .row label{
+      width:170px;
+      font-weight:bold;
+      font-size:14px;
+      color:#333;
+    }
+
+    .row span{
+      font-size:14px;
+      color:#333;
+    }
+
+    input[type="text"], select{
+      width:480px;
+      padding:6px;
+      border:1px solid #888;
+      font-size:14px;
+      background:white;
+    }
+
+    /* RADIO GROUP */
+    .gender{
+      display:flex;
+      flex-direction:column;
+      gap:4px;
+      font-weight:normal;
+      font-size:14px;
+    }
+
+    /* NOTES EDITOR */
+    .editor{
+      width:500px;
+      border:1px solid #888;
+      background:#fff;
+    }
+
+    .toolbar{
+      background:#e6e6e6;
+      padding:5px;
+      font-size:13px;
+      border-bottom:1px solid #aaa;
+    }
+
+    textarea{
+      width:100%;
+      height:140px;
+      border:none;
+      padding:10px;
+      resize:none;
+      font-size:14px;
+      outline:none;
+    }
+
+    /* CHECKBOX AREA */
+    .check-area{
+      font-size:14px;
+      color:#333;
+    }
+
+    /* CAPTCHA */
+    .captcha{
+      font-family: monospace;
+      font-size:40px;
+      letter-spacing:6px;
+      margin:5px 0;
+      color:#444;
+    }
+
+    .captcha-line{
+      display:flex;
+      justify-content:space-between;
+      width:480px;
+      font-size:13px;
+      color:#333;
+    }
+
+    /* FOOTER */
+    .footer{
+      margin-top:20px;
+      border-top:2px solid #bfbfbf;
+      padding-top:15px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+    }
+
+    .btn{
+      background:#444;
+      color:white;
+      border:1px solid #222;
+      padding:7px 18px;
+      font-size:14px;
+      cursor:pointer;
+      margin-left:5px;
+    }
+
+    .required{
+      font-size:13px;
+      color:#333;
+    }
+
+    /* SMALL ICON BOXES (bottom left) */
+    .icons{
+      display:flex;
+      gap:6px;
+      margin-bottom:5px;
+    }
+
+    .icon{
+      width:18px;
+      height:18px;
+      border:1px solid #666;
+      background:#ddd;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      font-size:12px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+
+  <!-- BASIC INFO -->
+  <div class="title">Basic Info</div>
+  <hr class="line">
+
+  <div class="row">
+    <label>Employee ID</label>
+    <span>9</span>
+  </div>
+
+  <div class="row">
+    <label>Last Name</label>
+    <span>Dodsworth</span>
+  </div>
+<div class="row">
+    <label>First Name</label>
+    <input type="text" value="Anne">
+  </div>
+
+  <div class="row">
+    <label>Gender</label>
+    <div class="gender">
+      <label><input type="radio" name="g"> Male</label>
+      <label><input type="radio" name="g"> Female</label>
+      <label><input type="radio" name="g"> XXX</label>
+      <label><input type="radio" name="g" checked> ZZZ</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Title</label>
+    <input type="text" value="Sales Representative">
+  </div>
+
+  <div class="row">
+    <label>Suffix</label>
+    <input type="text" value="Ms.">
+  </div>
+
+  <div class="row">
+    <label>BirthDate</label>
+    <input type="text" value="1969-07-02 00:00:00">
+  </div>
+
+  <div class="row">
+    <label>HireDate</label>
+    <input type="text" value="1994-11-15 00:00:00">
+  </div>
+
+  <div class="row">
+    <label>SSN # (if applicable)</label>
+    <input type="text">
+  </div>
+
+  <div class="row">
+    <label>Reports To</label>
+    <select style="width:200px;">
+      <option>Buchanan</option>
+    </select>
+  </div>
+
+  <!-- CONTACT INFO -->
+  <div class="title">Contact Info</div>
+  <hr class="line">
+
+  <div class="row">
+    <label>Email</label>
+    <input type="text" placeholder="name@example.com">
+  </div>
+
+  <div class="row">
+    <label>Address</label>
+    <input type="text" value="7 Houndstooth Rd.">
+  </div>
+
+  <div class="row">
+    <label>City</label>
+    <input type="text" value="London">
+  </div>
+
+  <div class="row">
+    <label>Region</label>
+    <input type="text">
+  </div>
+
+  <div class="row">
+    <label>Postal Code</label>
+    <input type="text" value="WG2 7LT">
+  </div>
+
+  <div class="row">
+    <label>Country</label>
+    <select>
+      <option>Russian Federation</option>
+    </select>
+  </div>
+
+  <div class="row">
+    <label>US Home Phone</label>
+    <input type="text" value="(234)234-2342">
+  </div>
+
+  <div class="row">
+    <label>Photo</label>
+    <input type="text" value="EmpID9.bmp">
+  </div>
+
+  <!-- OPTIONAL INFO -->
+  <div class="title">Optional Info</div>
+  <hr class="line">
+
+  <div class="row">
+    <label>Notes</label>
+    <div class="editor">
+      <div class="toolbar">
+        B I U | Align | Link | Tools...
+      </div>
+      <textarea>
+Anne has a BA degree in English from St. Lawrence College.
+She is fluent in French and German.ZZZ
+      </textarea>
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Preferred Shift</label>
+    <div class="check-area">
+      <label><input type="checkbox"> Regular</label><br>
+      <label><input type="checkbox" checked> Gravy Yard</label>
+    </div>
+  </div>
+
+  <div class="row">
+    <label>Active?</label>
+    <input type="checkbox" checked style="width:auto;">
+  </div>
+
+  <div class="row">
+    <label>Are you human?</label>
+    <div>
+      <div class="captcha">TIDAWO</div>
+      <div class="captcha-line">
+        <span></span>
+        <span>Click to change</span>
+      </div>
+      <input type="text" style="width:480px;">
+    </div>
+  </div>
+<!-- FOOTER -->
+  <div class="footer">
+    <div>
+      <div class="icons">
+        <div class="icon">◀</div>
+        <div class="icon">▶</div>
+      </div>
+      <div class="required">* required</div>
+    </div>
+
+    <div>
+      <button class="btn">Submit</button>
+      <button class="btn">Cancel</button>
+    </div>
+  </div>
+
+</div>
+
+</body>
+</html>
