@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Contact Form Flexbox</title>
+
+<style>
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #e6e6e6;
+    margin: 0;
+    padding: 40px 0;
+}
+.header-title {
+    background: #a8c7dc;
+    padding: 10px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    width: 900px;
+    margin: 0 auto;
+}
+.wrapper {
+    width: 900px;
+    margin: 20px auto;
+    border: 3px solid #222;
+    background: #efefef;
+    padding: 35px 40px;
+}
+
+.wrapper h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+    color: #333;
+}
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.row input {
+    flex: 1;
+}
+input, textarea {
+    padding: 14px;
+    border: 1px solid #cfcfcf;
+    background: #f8f8f8;
+    font-size: 15px;
+    outline: none;
+}
+.subject {
+    margin-bottom: 20px;
+}
+textarea {
+    height: 260px;
+    resize: none;
+    margin-bottom: 20px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+button {
+    background: #86b7da;
+    border: none;
+    padding: 14px 35px;
+    font-size: 16px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #6da7cf;
+}
+.note {
+    color: #777;
+    font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+
+<div class="wrapper">
+    <h2>Get in touch with us by filling contact form below</h2>
+
+    <form>
+        <div class="row">
+            <input type="text" placeholder="* Enter your full name">
+            <input type="email" placeholder="* Enter your email address">
+        </div>
+
+        <input class="subject" type="text" placeholder="Enter your subject">
+
+        <textarea placeholder="* Your message here..."></textarea>
+
+        <div class="bottom">
+            <button type="submit">Send message</button>
+            <div class="note">* Please fill all required form field, thanks!</div>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
