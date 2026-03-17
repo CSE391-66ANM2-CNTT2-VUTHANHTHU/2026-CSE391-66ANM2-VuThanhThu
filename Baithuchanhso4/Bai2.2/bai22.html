@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Form Đặt Hàng</title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:30px;
+}
+
+form{
+width:420px;
+}
+
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+.error{
+color:red;
+font-size:13px;
+display:none;
+}
+
+.counter{
+font-size:13px;
+text-align:right;
+}
+
+.invalid{
+border:2px solid red;
+}
+
+.valid{
+border:2px solid green;
+}
+
+#summary{
+border:1px solid #ccc;
+padding:15px;
+margin-top:20px;
+display:none;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Đặt hàng</h2>
+
+<form id="orderForm">
+
+<label>Sản phẩm</label>
+<select id="product">
+<option value="">-- Chọn sản phẩm --</option>
+<option value="Áo">Áo</option>
+<option value="Quần">Quần</option>
+<option value="Giày">Giày</option>
+</select>
+<span class="error" id="productError"></span>
+
+<br><br>
+
+<label>Số lượng</label>
+<input type="number" id="quantity">
+<span class="error" id="quantityError"></span>
+
+<br><br>
+
+<label>Ngày giao hàng</label>
+<input type="date" id="deliveryDate">
+<span class="error" id="dateError"></span>
+
+<br><br>
+
+<label>Địa chỉ giao</label>
+<input type="text" id="address">
+<span class="error" id="addressError"></span>
+
+<br><br>
+
+<label>Ghi chú</label>
+<textarea id="note"></textarea>
+<div class="counter" id="noteCount">0/200</div>
+<span class="error" id="noteError"></span>
+
+<br>
+
+<label>Thanh toán</label><br>
+
+<input type="radio" name="payment" value="COD"> COD  
+<input type="radio" name="payment" value="Bank"> Chuyển khoản  
+<input type="radio" name="payment" value="Ewallet"> Ví điện tử  
+
+<br>
+<span class="error" id="paymentError"></span>
+
+<br><br>
+
+<div><b>Tổng tiền:</b> <span id="total">0</span> VND</div>
+
+<br>
+
+<button type="submit">Đặt hàng</button>
+
+</form>
+
+<div id="summary"></div>
+
+<script src="bai22.js"></script>
+
+</body>
+</html>

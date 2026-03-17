@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Đăng ký</title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:20px;
+}
+
+input{
+display:block;
+margin-top:8px;
+padding:6px;
+width:250px;
+}
+
+.error{
+color:red;
+font-size:14px;
+}
+
+#strengthBar{
+width:250px;
+height:8px;
+background:#ddd;
+margin-top:5px;
+}
+
+#strengthLevel{
+height:100%;
+width:0%;
+}
+
+.counter{
+font-size:12px;
+color:gray;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Form Đăng ký</h2>
+
+<form id="form">
+
+<label>Họ tên</label>
+<input id="fullname" maxlength="50">
+<span class="counter" id="nameCount">0/50</span>
+<span class="error" id="nameError"></span>
+
+<label>Email</label>
+<input id="email">
+<span class="error" id="emailError"></span>
+
+<label>Mật khẩu</label>
+
+<div style="display:flex">
+<input id="password" type="password">
+<button type="button" id="togglePass">👁</button>
+</div>
+
+<div id="strengthBar">
+<div id="strengthLevel"></div>
+</div>
+
+<span class="error" id="passError"></span>
+
+<label>Xác nhận mật khẩu</label>
+<input id="confirm">
+<span class="error" id="confirmError"></span>
+
+<br>
+
+<button type="submit">Đăng ký</button>
+
+</form>
+
+<p id="success"></p>
+
+<script src="bai1.js"></script>
+
+</body>
+</html>

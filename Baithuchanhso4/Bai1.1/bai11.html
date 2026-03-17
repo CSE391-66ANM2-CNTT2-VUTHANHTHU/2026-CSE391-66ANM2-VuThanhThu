@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Bảng Điểm Sinh Viên</title>
+
+<style>
+
+body{
+font-family: Arial;
+padding:20px;
+}
+
+input{
+padding:6px;
+margin-right:10px;
+}
+
+table{
+border-collapse: collapse;
+margin-top:15px;
+width:600px;
+}
+
+th,td{
+border:1px solid #ccc;
+padding:8px;
+text-align:center;
+}
+
+th{
+background:#eee;
+}
+
+.weak{
+background:yellow;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Bảng Điểm Sinh Viên</h2>
+
+<input id="name" placeholder="Họ tên">
+<input id="score" type="number" placeholder="Điểm (0-10)">
+<button id="addBtn">Thêm</button>
+
+<table>
+
+<thead>
+<tr>
+<th>STT</th>
+<th>Họ tên</th>
+<th>Điểm</th>
+<th>Xếp loại</th>
+<th>Thao tác</th>
+</tr>
+</thead>
+
+<tbody id="tableBody"></tbody>
+
+</table>
+
+<p id="stats"></p>
+
+<script src="bai11.js"></script>
+
+</body>
+</html>

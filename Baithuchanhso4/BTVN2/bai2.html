@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Multi Step Form</title>
+
+<style>
+
+body{
+font-family:Arial;
+padding:20px;
+}
+
+.step{
+display:none;
+}
+
+.active{
+display:block;
+}
+
+.progress{
+width:300px;
+height:10px;
+background:#ddd;
+margin-bottom:20px;
+}
+
+.progress-bar{
+height:100%;
+width:33%;
+background:green;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Đăng ký nhiều bước</h2>
+
+<div class="progress">
+<div id="progressBar" class="progress-bar"></div>
+</div>
+
+<form id="form">
+
+<div class="step active" id="step1">
+
+<h3>Bước 1</h3>
+
+<input id="name" placeholder="Họ tên"><br>
+<input id="birth" type="date"><br>
+
+<label>
+<input type="radio" name="gender" value="Nam"> Nam
+</label>
+
+<label>
+<input type="radio" name="gender" value="Nữ"> Nữ
+</label>
+
+<br><br>
+
+<button type="button" id="next1">Tiếp theo</button>
+
+</div>
+
+<div class="step" id="step2">
+
+<h3>Bước 2</h3>
+
+<input id="email" placeholder="Email"><br>
+<input id="pass" type="password" placeholder="Mật khẩu"><br>
+<input id="confirm" type="password" placeholder="Xác nhận">
+
+<br><br>
+
+<button type="button" id="back1">Quay lại</button>
+<button type="button" id="next2">Tiếp theo</button>
+
+</div>
+
+<div class="step" id="step3">
+
+<h3>Xác nhận thông tin</h3>
+
+<p id="summary"></p>
+
+<button type="button" id="back2">Quay lại</button>
+<button type="submit">Hoàn tất</button>
+
+</div>
+
+</form>
+
+<p id="done"></p>
+
+<script src="multistep.js"></script>
+
+</body>
+</html>

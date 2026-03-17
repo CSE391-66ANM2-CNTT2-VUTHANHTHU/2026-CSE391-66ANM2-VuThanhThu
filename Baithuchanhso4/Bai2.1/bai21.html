@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<title>Form đăng ký</title>
+
+<style>
+
+body{
+font-family: Arial;
+padding:30px;
+}
+
+form{
+width:400px;
+}
+
+input{
+width:100%;
+padding:8px;
+margin-top:5px;
+}
+
+.error{
+color:red;
+font-size:13px;
+display:none;
+}
+
+.success{
+color:green;
+font-weight:bold;
+}
+
+.invalid{
+border:2px solid red;
+}
+
+.valid{
+border:2px solid green;
+}
+
+</style>
+
+</head>
+<body>
+
+<h2>Đăng ký tài khoản</h2>
+
+<form id="registerForm">
+
+<label>Họ và tên</label>
+<input type="text" id="fullname">
+<span class="error" id="fullnameError"></span>
+
+<br><br>
+
+<label>Email</label>
+<input type="text" id="email">
+<span class="error" id="emailError"></span>
+
+<br><br>
+
+<label>Số điện thoại</label>
+<input type="text" id="phone">
+<span class="error" id="phoneError"></span>
+
+<br><br>
+
+<label>Mật khẩu</label>
+<input type="password" id="password">
+<span class="error" id="passwordError"></span>
+
+<br><br>
+
+<label>Xác nhận mật khẩu</label>
+<input type="password" id="confirmPassword">
+<span class="error" id="confirmPasswordError"></span>
+
+<br><br>
+
+<label>Giới tính</label><br>
+
+<input type="radio" name="gender" value="Nam"> Nam
+<input type="radio" name="gender" value="Nữ"> Nữ
+
+<br>
+<span class="error" id="genderError"></span>
+
+<br><br>
+
+<label>
+<input type="checkbox" id="terms"> Tôi đồng ý điều khoản
+</label>
+
+<br>
+<span class="error" id="termsError"></span>
+
+<br><br>
+
+<button type="submit">Đăng ký</button>
+
+</form>
+
+<div id="successMessage"></div>
+
+<script src="bai21.js"></script>
+
+</body>
+</html>
